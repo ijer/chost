@@ -1,5 +1,6 @@
 #install dokku 
 echo '--- installing dokku ---\n'
+sudo apt-get update
 apt-get install -y python-software-properties
 wget -qO- https://raw.github.com/progrium/dokku/v0.2.2/bootstrap.sh | sudo DOKKU_TAG=v0.2.2 bash
 
@@ -17,6 +18,5 @@ dd if=/dev/zero of=/extraswap bs=1M count=512
 mkswap /extraswap
 echo '/extraswap         none            swap    sw                0       0' >> /etc/fstab
 swapon -a
-
 
 echo '--- installation completed ---\n'
