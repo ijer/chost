@@ -1,4 +1,4 @@
-#install dokku 
+#install dokku
 echo '--- installing dokku ---\n'
 sudo apt-get update
 apt-get install -y python-software-properties
@@ -8,6 +8,7 @@ wget -qO- https://raw.github.com/progrium/dokku/v0.2.2/bootstrap.sh | sudo DOKKU
 echo '--- installing dokku plugins (domains and mysql) ---\n'
 cd /var/lib/dokku/plugins
 git clone https://github.com/wmluke/dokku-domains-plugin.git domains-plugin
+git clone https://github.com/statianzo/dokku-supervisord.git dokku-supervisord
 git clone https://github.com/hughfletcher/dokku-mysql-plugin mysql
 chmod +x mysql/install mysql/commands mysql/pre-release
 dokku plugins-install
