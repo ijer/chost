@@ -5,14 +5,14 @@ A basic dokku installation that includes plugins to support :
  - mysql databases
  - supervisord to keep processes up
 
-This was tested on Ubuntu 12.04 on Digital Ocean droplets with 512Mb of memory
+This was tested on Ubuntu 14.04 on Digital Ocean droplets with 512Mb of memory
 
 Installation
 ```
 wget -qO- https://raw.github.com/ijer/chost/master/bootstrap.sh | sudo bash
 ```
 
-(optional) add the entry to your hosts file
+(optional) On OSX, add the entry to your hosts file
 ```
 sudo echo 'XXX.XXX.X.XXX chost' >> /private/etc/hosts
 ```
@@ -32,4 +32,4 @@ git push chost master
 Set domains
 ```
 ssh -t dokku@chost domains:set appname domain.com www.domain.com
-``` 
+```
